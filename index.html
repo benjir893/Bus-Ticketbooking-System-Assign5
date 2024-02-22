@@ -278,24 +278,27 @@
                             </div> -->
                         </div>
                         <div class="flex flex-row justify-evenly items-center gap-[103px]">
-                            <p class="">Total </p>
-                            <p class="">BDT <span id="total">0</span></p>
+                            <p class="bg-green-100 border-1 rounded-lg px-2 py-2 text-black font-semibold">Total </p>
+                            <p class="bg-green-100 border-1 rounded-lg px-2 py-2 text-black font-semibold">BDT <span id="total">0</span></p>
+                        </div>
+                        <div class="flex flex-col justify-center items-center">
+                            <p id="discountParagraph" class="hidden"><span id="discountedAmount" class="font-semibold"></span> Taka Discounted</p>
                         </div>
                     <div class="flex justify-center items-center">
-                        <input id="couponInput" type="text" placeholder="enter new15 or couple ">
+                        <input id="couponInput" type="text" class="px-3 py-4 border-0 rounded-lg my-3" placeholder="enter new15 or couple ">
                         <button onclick="addCoupon()" disabled id="couponbtn" class="btn w-16 bg-green-400">Apply</button>
                     </div>
                         <div class="flex flex-row justify-evenly items-center gap-[103px]">
-                            <p class="">Grand-Total </p>
-                            <p class="">BDT <span id="grandTotal">0</span></p>
+                            <p class="bg-green-100 border-1 rounded-lg px-2 py-2 text-black font-semibold my-3">Grand-Total </p>
+                            <p class="bg-green-100 border-1 rounded-lg px-2 py-2 text-black font-semibold my-3">BDT <span id="grandTotal">0</span></p>
                         </div>
                         <div class="flex flex-col justify-center items-center">
                                 <p class="">Passenger Name<sup>*</sup></p>
-                            <input id="name" type="text" name="Name" placeholder="Enter your name">
+                            <input id="name" type="text" name="Name" class="px-3 py-4 border-0 rounded-lg my-3" placeholder="Enter your name">
                             <p class="">Phone Number<sup>*</sup></p>
-                            <input type="tel" id="tphone" name="phone" pattern="[0-9]{11}" placeholder="Enter 11 dig phone number">
+                            <input type="tel" id="tphone" name="phone" class="px-3 py-4 border-0 rounded-lg my-3" pattern="[0-9]{11}" placeholder="Enter 11 dig phone number">
                             <p class="">Email<sup>*</sup></p>
-                            <input id="email" type="email" name="email" placeholder="Enter your email">
+                            <input id="email" type="email" name="email" class="px-3 py-4 border-0 rounded-lg my-3" placeholder="Enter your email">
                             <button onclick="showMessage()" disabled id="nextbtn" class="btn w-2/3 bg-green-400">Next</button>
                         </div>
                 </div>    

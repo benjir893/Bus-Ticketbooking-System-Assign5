@@ -55,21 +55,29 @@ function coupon(){
     const inputTxtValue = inputTxt.value;
     const grandTotal = document.getElementById('grandTotal');
     const totalTxt = document.getElementById('total');
+    const discountDisplayTxt = document.getElementById('discountParagraph');
+    const discountTxt = document.getElementById('discountedAmount');
     const totalValue = totalTxt.innerText;
     const total = parseInt(totalValue);
     grandTotal.innerText = total;
     if(inputTxtValue === 'couple'){
         const newTotal = total* 0.80;
         grandTotal.innerText = newTotal;
+        const deducted = total - newTotal;
+        discountTxt.innerText = deducted;
         inputTxt.classList.add('hidden');
         couponbtn.classList.add('hidden');
+        discountDisplayTxt.classList.remove('hidden');
 
     }
     else if(inputTxtValue === 'new15'){
         const newTotal = total* 0.85;
         grandTotal.innerText = newTotal;
+        const deducted = total - newTotal;
+        discountTxt.innerText = deducted;
         inputTxt.classList.add('hidden');
         couponbtn.classList.add('hidden');
+        discountDisplayTxt.classList.remove('hidden');
     }
     else{
         return alert('wrong coupon code');
