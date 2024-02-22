@@ -171,6 +171,13 @@ function showMessage(){
 }
 function btnContinueFunction(){
     messageSection.classList.add('hidden');
+    const bookingDisplay = document.getElementById('metaContainer');
+    bookingDisplay.innerText = '';
+    const discountDisplayTxt = document.getElementById('discountParagraph');
+    const discountTxt = document.getElementById('discountedAmount');
+    discountTxt.innerText = '';
+    discountDisplayTxt.classList.add('hidden');
+    
     const phone = document.getElementById('tphone');
     phone.value = '';
     const email = document.getElementById('email');
@@ -181,5 +188,11 @@ function btnContinueFunction(){
     grandTotal.innerText = 0;
     const total = document.getElementById('total');
     total.innerText = 0;
+    const couponbtn = document.getElementById('couponbtn')
+    const inputTxt = document.getElementById('couponInput');
+    inputTxt.value = '';
+    couponbtn.disabled = true;
+    inputTxt.classList.remove('hidden');
+    couponbtn.classList.remove('hidden');
 
 }
