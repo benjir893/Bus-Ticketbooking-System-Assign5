@@ -25,8 +25,30 @@ function basicTotalCalculation(btnElement,element2,element3){
     totalTxt.innerText = newTotal; 
     grandTotal.innerText = newTotal; 
     elementbtn.disabled = true;
+    elementbtn.style.backgroundColor='green';
 
 }
+// booking info
+function displayBookingInfo(btnElement, containerElement){
+    const element = document.getElementById(btnElement);
+    const elementTxt = element.innerText;
+    const seatClass = 'Economy';
+    const seatPrice ='550 Tk';
+    const containerDiv =document.getElementById(containerElement);
+    const childContainer = document.createElement('div');
+    const containerSeatNumb = document.createElement('p');
+    const containerSeatClass = document.createElement('p');
+    const containerSeatPrice = document.createElement('p');
+    containerSeatNumb.innerText = elementTxt;
+    containerSeatClass.innerText = seatClass;
+    containerSeatPrice.innerText = seatPrice;
+    childContainer.appendChild(containerSeatNumb);
+    childContainer.appendChild(containerSeatClass);
+    childContainer.appendChild(containerSeatPrice);
+    containerDiv.appendChild(childContainer);
+
+}
+
 function coupon(){
     const couponbtn = document.getElementById('couponbtn')
     const inputTxt = document.getElementById('couponInput');
@@ -61,91 +83,71 @@ function continueNext(){
     const b2 = document.getElementById('b2');
     const b3 = document.getElementById('b3');
     const b4 = document.getElementById('b4');
-    const a1Txt = a1.innerText;
-    const a2Txt = a2.innerText;
-    const a3Txt = a3.innerText;
-    const a4Txt = a4.innerText;
-    const b1Txt = b1.innerText;
-    const b2Txt = b2.innerText;
-    const b3Txt = b3.innerText;
-    const b4Txt = b4.innerText;
-    const phone = document.getElementById('phone');
-    const phoneValue = phone.value;
+    const c1 = document.getElementById('c1');
+    const c2 = document.getElementById('c2');
+    const c3 = document.getElementById('c3');
+    const c4 = document.getElementById('c4');
+    const d1 = document.getElementById('d1');
+    const d2 = document.getElementById('d2');
+    const d3 = document.getElementById('d3');
+    const d4 = document.getElementById('d4');
+    const e1 = document.getElementById('e1');
+    const e2 = document.getElementById('e2');
+    const e3 = document.getElementById('e3');
+    const e4 = document.getElementById('e4');
+    const f1 = document.getElementById('f1');
+    const f2 = document.getElementById('f2');
+    const f3 = document.getElementById('f3');
+    const f4 = document.getElementById('f4');
+    const g1 = document.getElementById('g1');
+    const g2 = document.getElementById('g2');
+    const g3 = document.getElementById('g3');
+    const g4 = document.getElementById('g4');
+
     const nextbtn = document.getElementById('nextbtn');
-    if((a1.disabled === false) ||( phoneValue=== '')){
-        nextbtn.disabled = true;
-        
-    }
-    else{
-        nextbtn.disabled = false;
-        a1.disabled = true;
-    }
-    //a2
-    if((a2.disabled === false) ||( phoneValue=== '')){
-        nextbtn.disabled = true;
-        
-    }
-    else{
-        nextbtn.disabled = false;
-        a2.disabled = true;
-    }
 
-    //a3
-    if((a3.disabled === false) ||( phoneValue=== '')){
-        nextbtn.disabled = true;
-        
-    }
-    else{
+    if(a1.disabled=== true || a2.disabled === true){
         nextbtn.disabled = false;
-        a3.disabled = true;
     }
-    //a4
-    if((a4.disabled === false) ||( phoneValue=== '')){
-        nextbtn.disabled = true;
-        
-    }
-    else{
+    else if(a3.disabled=== true || a4.disabled === true){
         nextbtn.disabled = false;
-        a4.disabled = true;
     }
-    //b1
-    if((b1.disabled === false) ||( phoneValue=== '')){
-        nextbtn.disabled = true;
-        
-    }
-    else{
+    else if(b1.disabled=== true || b2.disabled === true){
         nextbtn.disabled = false;
-        b1.disabled = true;
     }
-    //b2
-    if((b2.disabled === false) ||( phoneValue=== '')){
-        nextbtn.disabled = true;
-        
-    }
-    else{
+    else if(b3.disabled=== true || b4.disabled === true){
         nextbtn.disabled = false;
-        b2.disabled = true;
     }
-    //b3
-    if((b3.disabled === false) ||( phoneValue=== '')){
-        nextbtn.disabled = true;
-        
-    }
-    else{
+    else if(c1.disabled=== true || c2.disabled === true){
         nextbtn.disabled = false;
-        b3.disabled = true;
     }
-    //b4
-    if((b4.disabled === false) ||( phoneValue=== '')){
-        nextbtn.disabled = true;
-        
-    }
-    else{
+    else if(c3.disabled=== true || c4.disabled === true){
         nextbtn.disabled = false;
-        b4.disabled = true;
     }
-    
-
+    else if(d1.disabled=== true || d2.disabled === true){
+        nextbtn.disabled = false;
+    }
+    else if(d3.disabled=== true || d4.disabled === true){
+        nextbtn.disabled = false;
+    }
+    else if(e1.disabled=== true || e2.disabled === true){
+        nextbtn.disabled = false;
+    }
+    else if(e3.disabled=== true || e4.disabled === true){
+        nextbtn.disabled = false;
+    }
+    else if(f1.disabled=== true || f2.disabled === true){
+        nextbtn.disabled = false;
+    }
+    else if(f3.disabled=== true || f4.disabled === true){
+        nextbtn.disabled = false;
+    }
+    else if(g1.disabled=== true || g2.disabled === true){
+        nextbtn.disabled = false;
+    }
+    else if(g3.disabled=== true || g4.disabled === true){
+        nextbtn.disabled = false;
+    }
 
 }
 
@@ -158,7 +160,7 @@ function showMessage(){
 }
 function btnContinueFunction(){
     messageSection.classList.add('hidden');
-    const phone = document.getElementById('phone');
+    const phone = document.getElementById('tphone');
     phone.value = '';
     const email = document.getElementById('email');
     email.value = '';
