@@ -71,6 +71,9 @@ function coupon(){
         inputTxt.classList.add('hidden');
         couponbtn.classList.add('hidden');
     }
+    else{
+        return alert('wrong coupon code');
+    }
 
 }
 
