@@ -36,8 +36,12 @@ function displayBookingInfo(btnElement, containerElement){
     const seatPrice ='550 Tk';
     const containerDiv =document.getElementById(containerElement);
     const childContainer = document.createElement('div');
+    childContainer.classList.add('flex');
+    childContainer.classList.add('gap-12');
     const containerSeatNumb = document.createElement('p');
+    containerSeatNumb.classList.add('px-3');
     const containerSeatClass = document.createElement('p');
+    containerSeatClass.classList.add('px-3');
     const containerSeatPrice = document.createElement('p');
     containerSeatNumb.innerText = elementTxt;
     containerSeatClass.innerText = seatClass;
